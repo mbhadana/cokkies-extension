@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie Viewer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Cookie Viewer</h1>
+            <p>View and manage <span id="cookieCount" class="badge">0</span> cookies for the current domain.</p>
+        </header>
+
+        <main>
+            <div class="actions">
+                <button id="refreshBtn" class="btn primary">Refresh Cookies</button>
+                <button id="addDemoCookieBtn" class="btn secondary">Add Demo Cookie</button>
+                <button id="clearAllBtn" class="btn danger">Clear All Cookies</button>
+            </div>
+
+            <div class="table-container">
+                <table id="cookieTable">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Value</th>
+                            <th>Details (Inferred/Simulated)</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Cookies will be populated here -->
+                    </tbody>
+                </table>
+                <div id="emptyState" class="empty-state hidden">
+                    <p>No cookies found for this domain.</p>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
